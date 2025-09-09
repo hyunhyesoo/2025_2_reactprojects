@@ -1,0 +1,14 @@
+div{
+    text-align: center;
+    width: 450px;
+    padding: 20px;
+}
+
+.div-bg-ivory{
+    background-color: ivory;
+    border: 5px outset orange;
+}
+
+p{
+    font-size: large;
+}

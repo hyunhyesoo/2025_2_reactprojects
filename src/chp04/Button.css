@@ -1,0 +1,20 @@
+button{
+    width: 100px;
+    color: white;
+    margin: 15px;
+    padding: 10px;
+}
+
+.bg-blue{
+    background-color: #61dafb;
+    border: 3px ridge #282c34;
+}
+.bg-green{
+    background-color: #36ba2e;
+    border: 3px groove #282c34;
+}
+
+.bg-yellow{
+    background-color: #f1fb61;
+    border: 3px dotted #282c34;
+}
