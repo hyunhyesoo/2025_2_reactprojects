@@ -1,0 +1,40 @@
+.wrapper{
+    margin: 8px;
+    padding: 12px;
+    display: flex;
+    max-width: 350px;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: coral;
+    aspect-ratio: 3/4;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.image{
+    width: 100%; /* 부모 너비에 맞게 이미지 크기 조정 */
+    max-width: 200px;
+    height: auto;
+    flex-grow: 1;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.contentContainer{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titleText{
+    color: #333333;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.authorText{
+    color: #666555;
+    font-size: 25px;
+    margin-top: 4px;
+}
