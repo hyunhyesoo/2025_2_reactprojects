@@ -1,12 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import CommentList from "./chp05/CommentList";
-// import NotificationList from "./chp06/NotificationList";
-import Counter from "./chp07/exam01/Counter";
-import Accomodate from "./chp07/Accomodate";
+import ConfirmButtonFunction from "./chp08/ConfirmButtonFunction";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // setInterval(()=>{
@@ -18,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // },1000)
 root.render(
   <React.StrictMode>
-    <Accomodate/>
+    <ConfirmButtonFunction/>
   </React.StrictMode>
 );
 
