@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ConfirmButtonFunction from "./chp08/ConfirmButtonFunction";
+import LandingPage from "./chp09/LandingPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // setInterval(()=>{
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // },1000)
 root.render(
   <React.StrictMode>
-    <ConfirmButtonFunction/>
+    <LandingPage />
   </React.StrictMode>
 );
 
