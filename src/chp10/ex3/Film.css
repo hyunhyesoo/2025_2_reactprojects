@@ -1,0 +1,114 @@
+/* Film.css */
+:root {
+    --bg: #0f1115;          /* 전체 배경 (어두운 계열) */
+    --card: #171a21;        /* 카드 배경 */
+    --muted: #9aa4b2;       /* 보조 텍스트색 */
+    --text: #e8ecf1;        /* 본문 텍스트색 */
+    --accent: #7aa2f7;      /* 포커스/포인트색 */
+    --ring: 0 0 0 2px rgba(122, 162, 247, 0.25);
+    --shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+html, body, #root {
+    height: 100%;
+    background: radial-gradient(1200px 800px at 10% -10%, #11131a 20%, var(--bg) 60%),
+    linear-gradient(180deg, #0c0e12 0%, var(--bg) 100%);
+}
+
+.film_container {
+    min-height: 100%;
+    padding: clamp(20px, 3vw, 36px);
+    color: var(--text);
+}
+
+.film_title {
+    font-size: clamp(20px, 2.6vw, 28px);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-align: center;
+    margin: 8px 0 22px;
+}
+
+/* 한 줄에 4개 고정 */
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4열 고정 */
+    gap: clamp(14px, 2.2vw, 22px);
+    align-items: stretch;
+}
+
+/* 카드 */
+.content-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.content-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+    border-color: rgba(122, 162, 247, 0.25);
+}
+
+/* 이미지: 잘림 최소화를 위해 contain */
+.content-card .content-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;        /* 핵심: 크롭 방지 */
+    object-position: center;
+    display: block;
+    background: linear-gradient(180deg, #0f1218, #0c0e13); /* 빈 여백 어두운 톤 */
+}
+
+/* 레이아웃 흔들림 방지용 고정 비율 */
+.content-card > .content-image {
+    aspect-ratio: 2 / 3;        /* 포스터 비율 */
+    min-height: 240px;          /* aspect-ratio 미지원 브라우저 대비 */
+}
+
+/* 정보 영역 */
+.content-info {
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.content-info h3 {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.content-info p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* 포커스 접근성 */
+.content-card:focus-within,
+.content-card:focus {
+    outline: none;
+    box-shadow: var(--shadow), var(--ring);
+}
+
+/* (선택) 매우 좁은 화면 대응: 4열을 유지하면 카드가 너무 작아질 수 있어
+   필요하면 주석을 해제해 2열로 떨어뜨릴 수 있음 */
+/*
+@media (max-width: 520px) {
+  .card_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .content-card > .content-image {
+    min-height: 200px;
+  }
+}
+*/
