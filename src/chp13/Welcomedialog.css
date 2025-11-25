@@ -1,0 +1,45 @@
+/* 전체 리스트 레이아웃 */
+.DialogList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+}
+
+/* 공통 박스 스타일 */
+.Dialog-box {
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 제목/메시지 공통 */
+.Dialog-title {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+}
+
+.Dialog-message {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* 각각 다른 느낌 주기 */
+/* .Dialog-box Dialog1 (X) → .Dialog-box.Dialog1 (O) */
+.Dialog-box.Dialog1 {
+    border: 2px solid #4f8cff;
+    background: #e7f1ff;
+    color: #1f3c7a;
+}
+
+.Dialog-box.Dialog2 {
+    border: 2px solid #4caf50;
+    background: #e7f9ea;
+    color: #21552a;
+}
+
+.Dialog-box.Dialog3 {
+    border: 2px solid #ffb300;
+    background: #fff7e0;
+    color: #8a5a00;
+}

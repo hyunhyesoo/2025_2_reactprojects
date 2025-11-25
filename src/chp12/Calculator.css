@@ -1,0 +1,111 @@
+/* =========================
+   기본 배경
+   ========================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #ffeede, #ffe4c7); /* 은은한 살구색 */
+    transition: background 0.3s ease;
+}
+
+/* 물이 끓을 때(.boil-yes가 생기면) 배경을 조금 더 진하게 */
+body:has(.boil-yes) {
+    background: linear-gradient(180deg, #ffd9b7, #ffb56d);
+}
+
+/* =========================
+   레이아웃
+   ========================= */
+.temp-calculator {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 카드 박스 */
+.temp-card {
+    background: #fffaf3;
+    backdrop-filter: blur(4px);
+    padding: 28px 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    max-width: 520px;   /* 글씨 안 끊기게 넓게 */
+    width: 95%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 193, 112, 0.5);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 카드 안에 끓는 문장이 있을 때 살짝 더 따뜻하게 */
+.temp-card:has(.boil-yes) {
+    background: #fff3e3; /* 조금 더 진한 살구색 */
+    border-color: #ffb45c;
+    box-shadow: 0 12px 28px rgba(255, 152, 102, 0.35);
+}
+
+/* =========================
+   제목 / 텍스트
+   ========================= */
+.temp-title {
+    margin: 0 0 16px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #e07a5f;
+}
+
+/* 공통 결과 문장 스타일 */
+.boil-message {
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* 끓을 때 / 안 끓을 때 색 다르게 */
+.boil-yes {
+    color: #d95b1f;
+    font-weight: 600;
+}
+
+.boil-no {
+    color: #6d4c41;
+}
+
+/* =========================
+   fieldset / legend / input
+   ========================= */
+.temp-card fieldset {
+    border: 1px solid #ffcc80;
+    border-radius: 12px;
+    padding: 14px 16px 18px;
+    margin: 10px 0 16px;
+    background-color: #fffaf3;
+}
+
+.temp-card legend {
+    padding: 0 8px;
+    font-size: 0.9rem;
+    color: #d4663b;
+    font-weight: 600;
+    white-space: nowrap;   /* 온도 문구 한 줄로 */
+}
+
+.temp-card input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ffcc80;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    background-color: #fffdf7;
+}
+
+.temp-card input[type="text"]:focus {
+    border-color: #ffb74d;
+    box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.35);
+    background-color: #fffaf0;
+}
