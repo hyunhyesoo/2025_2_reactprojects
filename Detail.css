@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Pretendard', sans-serif;
+    background-color: #fff;
+}
+
+.mainContainer {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.product {
+    background-color: #fff8f8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.productContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.productImage {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.productRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.productText {
+    margin-bottom: 10px;
+}
+
+.productName {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.productDetail {
+    font-size: 16px;
+    color: #444;
+}
+
+.favoriteIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.productAction {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 16px;
+}
+
+.likeBtn,
+.commentBtn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+.productInfo {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    list-style: none;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 즐겨찾기 아이콘 */
+.favoriteIcon {
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.favoriteIcon:hover {
+    transform: scale(1.2);
+}
+
+.favoriteIcon.active {
+    animation: starPop 0.3s ease;
+}
+
+@keyframes starPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* 좋아요 버튼 */
+.likeBtn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.likeBtn:hover {
+    transform: scale(1.1);
+}
+
+.likeBtn.liked {
+    background-color: #ffe5e5;
+    border-color: #ff6b6b;
+}
+
+/* 댓글 버튼 */
+.commentBtn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.commentBtn:hover {
+    transform: scale(1.1);
+    background-color: #e3f2fd;
+}
+
+@media (max-width: 767px) {
+    .mainContainer {
+        padding: 20px 10px;
+    }
+
+    .product {
+        padding: 20px;
+    }
+
+    .productContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productImage {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .productText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .productTitle {
+        font-size: 24px;
+    }
+
+    .productDetail {
+        font-size: 16px;
+    }
+
+    .productAction {
+        justify-content: center;
+        position: static;
+        margin-top: 16px;
+    }
+
+    .likeBtn,
+    .commentBtn {
+        font-size: 30px;
+    }
+
+    .productInfo {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+}
+
+.productTitle {
+    font-size: 24px;
+}
+
+.productDetail {
+    font-size: 16px;
+}
+
+.productAction {
+    justify-content: center;
+    position: static;
+    margin-top: 16px;
+}
+
+.likeBtn,
+.commentBtn {
+    font-size: 30px;
+}
+
+.productInfo {
+    font-size: 14px;
+    margin-top: 30px;
+}
